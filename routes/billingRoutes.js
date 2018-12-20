@@ -4,7 +4,7 @@ const requireLogin = require("../middlewares/requireLogin");
 
 module.exports = app => {
 	app.post("/api/stripe", requireLogin, async (req, res) => {
-		//  request( route, [middleware(s)], function)
+		//  request( route, [middleware(s) in the order you want to be run], function)
 		if (!req.user) {
 			return res.status(401).send({ error: "You must login!fff" });
 		}
