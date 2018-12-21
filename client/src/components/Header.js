@@ -17,6 +17,9 @@ class Header extends React.Component {
 				);
 			default:
 				return [
+					<li>
+						<a href="/surveys">Dashboard</a>
+					</li>,
 					<li key="1">
 						<Payments />
 					</li>,
@@ -32,7 +35,7 @@ class Header extends React.Component {
 
 	renderHomeButtonLink() {
 		if (this.props.auth) {
-			return "/surveys";
+			return "/";
 		} else {
 			return "/";
 		}
