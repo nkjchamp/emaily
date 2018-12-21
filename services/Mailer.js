@@ -19,9 +19,12 @@ class Mailer extends helper.Mail {
 	}
 
 	formatAddresses(recipients) {
-		return recipients.map(({ email }) => {
-			return new helper.Email(email);
-		});
+		return recipients
+			.filter(({ email }) => email.length > 0)
+			.map(({ email }) => {
+				// console.log("mailer email: ", email);
+				return new helper.Email(email);
+			});
 	}
 
 	addClickTracking() {
