@@ -16,17 +16,29 @@ class SurveyList extends React.Component {
 						<span className="card-title">{survey.title}</span>
 						<p>{survey.body}</p>
 						<p className="right">
-							Sent On{" "}
+							Sent On:{" "}
 							{new Date(survey.dateSent).toLocaleDateString()}
 						</p>
 					</div>
 					<div className="card-action">
-						<button className="green lighten-1 waves-effect waves-light btn">
-							Yes: {survey.yes}
-						</button>
-						<button className="red lighten-1 waves-effect waves-light btn">
-							No: {survey.no}
-						</button>
+						<span
+							className="white-text"
+							style={{ margin: "0 10px" }}
+						>
+							Yes:{" "}
+							<span className="green-text lighten-1">
+								{survey.yes}
+							</span>
+						</span>
+						<span
+							className="white-text"
+							style={{ margin: "0 10px" }}
+						>
+							No:{" "}
+							<span className="red-text lighten-1">
+								{survey.no}
+							</span>
+						</span>
 					</div>
 				</div>
 			);

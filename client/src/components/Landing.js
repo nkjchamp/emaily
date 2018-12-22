@@ -10,7 +10,7 @@ const Landing = () => {
 			</p>
 			<ul>
 				<li>
-					Provide a fake (or real email) as long as it follow
+					Provide a fake (or real email) as long as it follows
 					abc@xyz.com.
 				</li>
 				<li>
@@ -26,11 +26,11 @@ const Landing = () => {
 			</ul>
 			<p>
 				Each Credit = One Survey to send. <br />
-				Each Survey should have a Yes/No feedback question as the "Body"
-				of the email. <br />
+				Each Survey should have a single Yes/No feedback question as the
+				"Body" of the email. <br />
 				Go through the Survey Creation process, and provide valid emails
-				to test / see your emails. <br />
-				Select Yes/No in the email that you receive. <br />
+				in a comma separate list to test / see your emails. <br />
+				Select Yes/No in the email(s) that you receive. <br />
 				Check your dashboard for an updated list of your created Surveys
 				and results.
 				<br />
