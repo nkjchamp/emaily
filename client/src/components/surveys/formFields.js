@@ -10,12 +10,12 @@ export default [
 		noValueError: "You must provide a Subject Line"
 	},
 	{
-		label: "Email Body",
+		label: "Body",
 		name: "body",
 		noValueError: "You must provide an Email Body"
 	},
 	{
-		label: "Recipient List",
+		label: "Recipient List (Comma Separated List of Emails)",
 		name: "recipients",
 		noValueError: "You must provide a Recipient List"
 	}

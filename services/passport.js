@@ -24,13 +24,20 @@ passport.use(
 			proxy: true
 		},
 		async (accessToken, refreshToken, profile, done) => {
+			// console.log("access token: ", accessToken);
+			// console.log("refresh token: ", refreshToken);
+			// console.log("profile id: ", profile.id);
+			// console.log("email: ", profile.emails[0].value);
 			const existingUser = await User.findOne({ googleId: profile.id });
 			if (existingUser) {
 				// we already have a user with this id, do not create a new user
 				done(null, existingUser);
 			} else {
 				// we do not have a user with this id, create a new user
-				const user = await new User({ googleId: profile.id }).save();
+				const user = await new User({
+					googleId: profile.id,
+					email: profile.emails[0].value
+				}).save();
 				done(null, user);
 			}
 		}
