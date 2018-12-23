@@ -9,13 +9,13 @@ import formFields from "./formFields";
 import { submitSurvey } from "../../actions";
 
 class SurveyFormReview extends React.Component {
-	constructor(props) {
-		super(props);
-		// console.log(props);
-		// this.onCancel = onCancel;
-		// this.credits = this.props.credits;
-		// this.history = this.props.history;
-	}
+	// constructor(props) {
+	// 	super(props);
+	// 	// console.log(props);
+	// 	// this.onCancel = onCancel;
+	// 	// this.credits = this.props.credits;
+	// 	// this.history = this.props.history;
+	// }
 
 	renderReviewFields() {
 		const reviewFields = _.map(formFields, ({ name, label }) => {
