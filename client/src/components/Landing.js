@@ -31,6 +31,8 @@ const Landing = () => {
 				Go through the Survey Creation process, and provide valid emails
 				in a comma separate list to test / see your emails. <br />
 				Select Yes/No in the email(s) that you receive. <br />
+				(NOTE: Hotmail and Yahoo's block emails from the site's server)
+				<br />
 				Check your dashboard for an updated list of your created Surveys
 				and results.
 				<br />
