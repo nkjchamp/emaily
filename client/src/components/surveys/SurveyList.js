@@ -9,6 +9,16 @@ class SurveyList extends React.Component {
 	}
 
 	renderSurveys() {
+		if (!this.props.surveys.length) {
+			return (
+				<div>
+					<h3>You have no surveys.</h3>
+					<p>
+						Click the red "+" button below to create a new survey.
+					</p>
+				</div>
+			);
+		}
 		return this.props.surveys.reverse().map(survey => {
 			return (
 				<div

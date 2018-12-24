@@ -7,6 +7,7 @@ import Header from "./Header";
 import Landing from "./Landing";
 import Dashboard from "./Dashboard";
 import SurveyNew from "./surveys/SurveyNew";
+import SurveyThanks from "./surveys/SurveyThanks";
 
 class App extends React.Component {
 	componentDidMount() {
@@ -22,6 +23,10 @@ class App extends React.Component {
 						<Route exact path="/" component={Landing} />
 						<Route exact path="/surveys" component={Dashboard} />
 						<Route path="/surveys/new" component={SurveyNew} />
+						<Route
+							path="/api/surveys/:surveyId/:choice"
+							component={SurveyThanks}
+						/>
 					</div>
 				</BrowserRouter>
 			</div>
