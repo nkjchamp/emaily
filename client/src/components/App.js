@@ -22,9 +22,13 @@ class App extends React.Component {
 						<Header />
 						<Route exact path="/" component={Landing} />
 						<Route exact path="/surveys" component={Dashboard} />
-						<Route path="/surveys/new" component={SurveyNew} />
 						<Route
-							path="/api/surveys/:surveyId/:choice"
+							exact
+							path="/surveys/new"
+							component={SurveyNew}
+						/>
+						<Route
+							path="/surveys/:surveyId/:choice"
 							component={SurveyThanks}
 						/>
 					</div>

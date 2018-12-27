@@ -11,10 +11,6 @@ class Landing extends React.Component {
 		M.Pushpin.init(this.pushpin);
 	}
 
-	getActiveElement(id) {
-		return 'a[href="#' + id + '"]';
-	}
-
 	render() {
 		return (
 			<div className="row">

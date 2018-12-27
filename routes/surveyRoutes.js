@@ -11,10 +11,15 @@ const surveyTemplate = require("../services/emailTemplates/surveyTemplate");
 const Survey = mongoose.model("surveys"); // some testing frameworks will complain if your require in a file multiple times so this is a workaround
 
 module.exports = app => {
-	app.get("/api/surveys/:surveyId/yes", (req, res) => {
-		res.send(
-			"Thanks for voting 'Yes'! I hope you vote 'Yes' to hiring Neil too :)"
-		);
+	app.get("/api/surveys/:surveyId", async (req, res) => {
+		survey = await Survey.findOne({ _id: req.params.surveyId }).select({
+			recipients: false, // specify we don't want the results set to include the recipients field
+			yes: false,
+			no: false,
+			_user: false
+		});
+
+		res.send(survey);
 	});
 
 	app.get("/api/surveys/:surveyId/no", (req, res) => {
@@ -58,7 +63,7 @@ module.exports = app => {
 			.value();
 		// console.log("events: ", events);
 
-		res.send({});
+		res.send({ surveyId, choice });
 	});
 
 	app.get("/api/surveys", requireLogin, async (req, res) => {
