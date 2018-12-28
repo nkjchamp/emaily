@@ -9,7 +9,11 @@ class SurveyList extends React.Component {
 	}
 
 	renderSurveys() {
-		if (!this.props.surveys.length) {
+		// console.log(this.props);
+		// if (!this.props.surveys[0]) {
+		// 	return <div>Loading...</div>;
+		// }
+		if (this.props.surveys.length === 0) {
 			return (
 				<div>
 					<h3>You have no surveys.</h3>
